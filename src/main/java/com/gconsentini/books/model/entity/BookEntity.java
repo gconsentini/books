@@ -13,12 +13,11 @@ public class BookEntity {
     private Long id;
     @Column
     private String title;
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String description;
     @Column
     private String isbn;
     @Column
     private String language;
-
 
 }

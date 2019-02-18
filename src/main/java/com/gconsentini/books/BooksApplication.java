@@ -19,8 +19,7 @@ public class BooksApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void fillDataFromWebSite() {
-		booksCrawler.collectBooks();
-
+		booksCrawler.collectBooks("https://kotlinlang.org/docs/books.html");
 	}
 }
 
