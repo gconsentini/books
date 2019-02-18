@@ -5,12 +5,6 @@ import lombok.Data;
 
 @Data
 public class BookDto {
-    /*{
-        "title": "Book title example",
-            "description": "Book description example",
-            "isbn": "9781617293290",
-            "language": "BR"
-    }*/
 
     private String title;
     private String description;
@@ -18,10 +12,10 @@ public class BookDto {
     private String language;
 
     public BookDto(String title, String description, String isbn, String language){
-        this.title = title;
-        this.description = description;
-        this.isbn = isbn;
-        this.language = language;
+        this.setTitle(title);
+        this.setDescription(description);
+        this.setIsbn(isbn);
+        this.setLanguage(language);
     }
 
 

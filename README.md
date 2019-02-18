@@ -2,6 +2,8 @@
 
 Somente uma api para listar e cadastrar livros.
 
+[![Build Status](https://travis-ci.com/gconsentini/books.svg?branch=master)](https://travis-ci.com/gconsentini/books)
+
 ## Tecnologias utilizadas
 
 - Java 8
