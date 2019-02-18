@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  simian:
+    container_name: 'books-app'
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    image: books-app
+    ports:
+      - 8080:8080
