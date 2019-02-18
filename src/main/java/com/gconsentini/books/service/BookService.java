@@ -28,16 +28,14 @@ public class BookService {
         return true;
     }
 
-    public BookDto retrieveBook(Long bookId) {
-        BookDto bookDto = null;
+    public BookEntity retrieveBook(Long bookId) {
         if (bookId != null) {
             Optional<BookEntity> book = bookRepository.findById(bookId);
             if (book.isPresent()){
-                bookDto = new BookDto(book.get().getId(), book.get().getTitle(),
-                        book.get().getDescription(), book.get().getIsbn(), book.get().getLanguage());
+                return book.get();
             }
         }
-        return bookDto;
+        return null;
     }
 
     public ListOfBooks retrieveAllBooks(){

@@ -12,14 +12,12 @@ public class BookDto {
             "language": "BR"
     }*/
 
-    private Long id;
     private String title;
     private String description;
     private String isbn;
     private String language;
 
-    public BookDto(Long id, String title, String description, String isbn, String language){
-        this.id = id;
+    public BookDto(String title, String description, String isbn, String language){
         this.title = title;
         this.description = description;
         this.isbn = isbn;

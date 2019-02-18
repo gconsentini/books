@@ -32,14 +32,14 @@ public class BookController {
         return ResponseEntity.ok().build();
     }
 
-    @ApiOperation(value = "retorna um livro por id", response = BookEntity.class)
+    @ApiOperation(value = "Retorna um livro por id", response = BookEntity.class)
     @GetMapping("/books/{bookId}")
     @ApiResponse(code = 200, message = "Success", response = BookEntity.class)
-    public BookDto getBookById(@PathVariable Long bookId){
+    public BookEntity getBookById(@PathVariable Long bookId){
         return bookService.retrieveBook(bookId);
     }
 
-    @ApiOperation(value = "retorna um livro por id", response = ListOfBooks.class)
+    @ApiOperation(value = "Retorna todos os livros na base", response = ListOfBooks.class)
     @GetMapping("/books")
     @ApiResponse(code = 200, message = "Success", response = ListOfBooks.class)
     public ListOfBooks getAllBooks() {
