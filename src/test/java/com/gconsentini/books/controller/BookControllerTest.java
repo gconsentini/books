@@ -38,8 +38,10 @@ public class BookControllerTest {
     @Test
     public void createNewBookTest(){
         Mockito.doNothing().when(booksCrawler).collectBooks(Mockito.any());
-        Mockito.when(bookService.createBook(Mockito.any())).thenReturn(true);
+        Mockito.when(bookService.createBook(Mockito.notNull())).thenReturn(true);
+        Mockito.when(bookService.createBook(null)).thenReturn(false);
         Assert.assertNotNull(bookController.postBook(new BookDto("TITULO", "DESCRICAO", "ISBN", "BR")));
+        Assert.assertNotNull(bookController.postBook(null));
     }
 
     @Test
