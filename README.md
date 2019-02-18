@@ -4,6 +4,8 @@ Somente uma api para listar e cadastrar livros.
 
 [![Build Status](https://travis-ci.com/gconsentini/books.svg?branch=master)](https://travis-ci.com/gconsentini/books)
 
+[![codecov](https://codecov.io/gh/gconsentini/books/branch/master/graph/badge.svg)](https://codecov.io/gh/gconsentini/books)
+
 ## Tecnologias utilizadas
 
 - Java 8
@@ -15,6 +17,7 @@ Somente uma api para listar e cadastrar livros.
 - Jacoco
 - Docker, Docker-compose
 - TravisCI
+- Codecov
 
 ## O que é necessário para rodar a API
 
