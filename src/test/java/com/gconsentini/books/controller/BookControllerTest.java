@@ -29,7 +29,7 @@ public class BookControllerTest {
     @MockBean
     private BooksCrawler booksCrawler;
 
-    @MockBean
+    @Autowired
     private BookController bookController;
 
     @MockBean
@@ -38,21 +38,21 @@ public class BookControllerTest {
     @Test
     public void createNewBookTest(){
         Mockito.doNothing().when(booksCrawler).collectBooks(Mockito.any());
-        Mockito.when(bookController.postBook(Mockito.any())).thenReturn(ResponseEntity.ok().build());
+        Mockito.when(bookService.createBook(Mockito.any())).thenReturn(true);
         Assert.assertNotNull(bookController.postBook(new BookDto("TITULO", "DESCRICAO", "ISBN", "BR")));
     }
 
     @Test
     public void getBookByIdTest() {
         Mockito.doNothing().when(booksCrawler).collectBooks(Mockito.any());
-        Mockito.when(bookController.getBookById(Mockito.any())).thenReturn(new BookEntity());
+        Mockito.when(bookService.retrieveBook(Mockito.any())).thenReturn(new BookEntity());
         Assert.assertNotNull(bookController.getBookById(1L));
     }
 
     @Test
     public void getAllBooksTest(){
         Mockito.doNothing().when(booksCrawler).collectBooks(Mockito.any());
-        Mockito.when(bookController.getAllBooks()).thenReturn(new ListOfBooks());
+        Mockito.when(bookService.retrieveAllBooks()).thenReturn(new ListOfBooks());
         Assert.assertNotNull(bookController.getAllBooks());
     }
 
