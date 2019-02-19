@@ -28,7 +28,7 @@ Somente uma api para listar e cadastrar livros.
 ## Instruções
 ```
 $ ./mvnw clean install
-$ docker-compose up
+$ ./mvnw spring-boot:run
 ```
 
 A partir disso a mesma estará disponivel em:
